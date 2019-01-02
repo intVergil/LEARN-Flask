@@ -1,5 +1,5 @@
 # Python
-*/__pycache__
+__pycache__
 
 # MAC
-*.DS_Store
+.DS_Store

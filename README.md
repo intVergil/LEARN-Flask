@@ -18,6 +18,7 @@
 - virtualenv 16.1.0
 - python 3.6.7
 - Flask 1.0.2
+- flask-wtf
 
 ## 项目结构
 
@@ -140,8 +141,24 @@ flask
 
 ```.gitignore
 # Python
-*/__pycache__
+__pycache__
 
 # MAC
-*.DS_Store
+.DS_Store
+```
+
+### 3. 使用WTFORM制作表单
+
+由于浏览器默认的require渲染会覆盖WTF的require，教程中的写法无法自定义验证反馈，需要将浏览器默认的require关闭。
+
+- 在每一项表单中添加(required=False)属性
+
+```html
+  <p>
+      {{ form.username.label }}<br>
+      {{ form.username(size=32,required=False) }}<br>
+      {% for error in form.username.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+      {% endfor %}
+  </p>
 ```
