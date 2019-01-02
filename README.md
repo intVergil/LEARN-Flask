@@ -40,6 +40,7 @@ flask
 /flask_tutorial$ source venv/bin/activate  #使用virtualenv进入虚拟环境
 /flask_tutorial$ cd flask/                 #打开flask文件夹
 /flask_tutorial/flask$ flask run           #启动flask
+ (venv) :/flask_tutorial$ deactivate       #切出虚拟环境
 ```
 
 ## 学习笔记
@@ -130,3 +131,17 @@ flask
      #4. 切出虚拟环境
      (venv) yan53074@intVergil:/myproject$ deactivate
      ```
+
+### 2. 配置.gitignore
+
+由于Python执行后产生的缓存文件也会加入到git，需要手动设置.gitignore不上传哪些文件。
+
+- 注意：已push的部分已经加入管理行列，需要手动删除。
+
+```.gitignore
+# Python
+*/__pycache__
+
+# MAC
+*.DS_Store
+```
