@@ -1,10 +1,10 @@
 # flask_tutorial
 
-通过学习flask框架学习后端知识，选择flask的原因：
+通过学习flask框架学习后端知识，选择flask的原因：
 
 - 同时可以学习python
 - flask轻巧，灵活，需要自己设定，更适合用来学习了解后端
-- django更重，更适合快速开发，但也像rails一样更封闭些，不太适合初学
+- django更重，更适合快速开发，但也像rails一样更封闭些，不太适合初学
 
 ## 使用教程：
 
@@ -38,10 +38,10 @@ flask
 - 启动flask：
 
 ```shell
-/flask_tutorial$ source venv/bin/activate  #使用virtualenv进入虚拟环境
-/flask_tutorial$ cd flask/                 #打开flask文件夹
-/flask_tutorial/flask$ flask run           #启动flask
- (venv) :/flask_tutorial$ deactivate       #切出虚拟环境
+source venv/bin/activate  #使用virtualenv进入虚拟环境
+cd flask/                 #打开flask文件夹
+flask run                 #启动flask
+deactivate                #切出虚拟环境
 ```
 
 ## 学习笔记
@@ -162,3 +162,11 @@ __pycache__
       {% endfor %}
   </p>
 ```
+
+### 4. 数据库
+
+使用flask插件链接model和数据库：
+
+- flask-sqlalchemy
+- flask-migrate
+- pymysql
