@@ -17,8 +17,6 @@
 - pyenv 1.2.8-5-gec9fb549
 - virtualenv 16.1.0
 - python 3.6.7
-- Flask 1.0.2
-- flask-wtf
 
 ## 项目结构
 
@@ -34,6 +32,18 @@ flask
 ```
 
 ## 开始项目
+
+- 安装插件：
+
+```shell
+virtualenv --no-site-packages venv
+source venv/bin/activate
+pip install flask-wtf
+pip install flask-sqlalchemy
+pip install flask-migrate
+pip install pymysql
+pip install flask_login
+```
 
 - 启动flask：
 
@@ -183,7 +193,7 @@ flask db upgrade             #将Model修改应用到数据库
 - 密码加密存储 `generate_password_hash('密码字符串')`
 - 密码比对 `check_password_hash(hash,'字符串')`
 
-使用flask-login插件完成：
+使用flask_login插件完成：
 
 - 记住我功能：使用current_user（）方法，`if current_user.is_authenticated:`
 - 登录功能：使用login_user（）方法，对表格里的数据进行查询验证
