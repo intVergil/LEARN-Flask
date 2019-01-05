@@ -1,22 +1,6 @@
-# flask_tutorial
+# virtualenv分支
 
-通过学习flask框架学习后端知识，选择flask的原因：
-
-- 同时可以学习python
-- flask轻巧，灵活，需要自己设定，更适合用来学习了解后端
-- django更重，更适合快速开发，但也像rails一样更封闭些，不太适合初学
-
-## 使用教程：
-
-- Flask从入门到做出一个博客的大型教程（<https://blog.csdn.net/u014793102/article/details/80372815>）
-
-## 使用环境：
-
-- OSX 10.14.2
-- shell zsh
-- pyenv 1.2.8-5-gec9fb549
-- virtualenv 16.1.0
-- python 3.6.7
+- [Flask从入门到做出一个博客的大型教程](https://blog.csdn.net/u014793102/article/details/80372815)
 
 ## 项目结构
 
