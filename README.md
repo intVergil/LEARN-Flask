@@ -170,3 +170,34 @@ __pycache__
 - flask-sqlalchemy
 - flask-migrate
 - pymysql
+
+```shell
+flask db migrate -m 'commit' #提交Model的修改
+flask db upgrade             #将Model修改应用到数据库
+```
+
+### 5. 用户登录模块
+
+使用werkzeug.security完成：
+
+- 密码加密存储 `generate_password_hash('密码字符串')`
+- 密码比对 `check_password_hash(hash,'字符串')`
+
+使用flask-login插件完成：
+
+- 记住我功能：使用current_user（）方法，`if current_user.is_authenticated:`
+- 登录功能：使用login_user（）方法，对表格里的数据进行查询验证
+- 登出功能：使用logout_user（）方法
+- 登录限制：使用login_view（）方法，使用`@login_required`添加限制
+- 用户注册功能：一次完整的数据库模块创建
+
+增加数据库模块的基本方法
+
+  1. 创建form：创建表单及验证规则，如flask/app/forms.py中的RegistrationForm
+  2. 创建前端页面：如flask/app/templates/register.html
+  3. 创建视图模块：如flask/app/routes.py 中的 `@app.route('/register', methods=['GET', 'POST'])`
+    - routes引入创建的表单，制定数据库读写规则，并且返回给页面。
+
+### 6. 用户个人资料页
+
+用户头像：Gravatar
