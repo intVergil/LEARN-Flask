@@ -22,12 +22,15 @@
 
 ```shell
 flask
-├── app                   #项目文件夹
-│   ├── templates         #view层
-│       ├── base.html     #layout
-│       └── index.html    #模版内容
+├── app/                  #项目文件夹
+│   ├── templates/        #view层文件夹
+│   │   └── base.html     #layout
 │   ├── __init__.py       #项目初始化
+│   ├── forms.py          #form
+│   ├── models.py         #model
 │   └── routes.py         #主页路由
+└── migrations/           #migrate文件夹
+└── config.py             #设置项
 └── myblog.py             #项目入口
 ```
 
