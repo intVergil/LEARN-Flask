@@ -85,3 +85,9 @@ def home():
 ### 6. User Authentication
 
 使用flask_login实现登陆功能
+
+### 7. User Account and Profile Picture
+
+增加更改用户名及邮箱功能
+
+增加上传图片功能（上传至本地，使用Pillow压缩）
