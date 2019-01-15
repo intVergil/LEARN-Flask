@@ -6,13 +6,16 @@
 
 ```bash
 blog
-├── app/                  #项目文件夹
-│   ├── templates/        #view层文件夹
-│   │   └── layout.html     #layout
-│   ├── __init__.py       #项目初始化
-│   ├── routes.py         #主页路由
-│   └── forms.py          #表单文件
-└── flaskblog.py          #项目入口
+├── flaskblog/            #项目文件夹
+│   ├── templates/          #view层文件夹
+│   │   └── layout.html       #layout
+│   ├── __init__.py         #项目初始化
+│   ├── forms.py            #表单文件
+│   ├── models.py           #数据库模型
+│   ├── routes.py           #路由
+│   └── site.db             #sqlite数据库
+├── config.py             #项目配置
+└── run.py                #项目入口
 ```
 
 ## 开始项目`
@@ -77,4 +80,8 @@ def home():
 
 ### 5. Package Structure
 
-整理文件，不过我一开始就整理好了。
+整理项目结构，不过我一开始就整理好了。
+
+### 6. User Authentication
+
+使用flask_login实现登陆功能
