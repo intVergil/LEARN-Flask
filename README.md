@@ -1,22 +1,6 @@
-# flask_tutorial
+# blog分支
 
-通过学习flask框架学习后端知识，选择flask的原因：
-
-- 同时可以学习python
-- flask轻巧，灵活，需要自己设定，更适合用来学习了解后端
-- django更重，更适合快速开发，但也像rails一样更封闭些，不太适合初学
-
-## 使用教程：
-
-- [Python Flask Tutorial](https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH)
-
-## 使用环境：
-
-- OSX 10.14.2
-- shell zsh
-- pyenv 1.2.8-5-gec9fb549
-- virtualenv 16.1.0
-- python 3.6.7
+- 参考教程：[Python Flask Tutorial](https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH)
 
 ## 项目结构
 
@@ -26,7 +10,8 @@ blog
 │   ├── templates/        #view层文件夹
 │   │   └── layout.html     #layout
 │   ├── __init__.py       #项目初始化
-│   └── routes.py         #主页路由
+│   ├── routes.py         #主页路由
+│   └── forms.py          #表单文件
 └── flaskblog.py          #项目入口
 ```
 
@@ -71,3 +56,25 @@ def home():
 #### static文件引入
 
 - 设置PATH：`url_for('static', filename='main.css')`
+
+### 3. Form and User input
+
+使用flask-wtf，基本流程：
+
+- 创建表单：forms.py              #class 表单名
+- 创建路由：routes.py             #form = 表单名(), render_template(posts=posts)
+- 创建模版：templates/*.html      #{{ form.栏目名(required=False) }}
+
+使用flash，基本流程：
+
+- 添加flash至模版：templates/layout.html    #`{% with messages = get_flashed_messages(with_categories=true) %}{% endwith %}`
+- 添加flash规则：routes.py                  #`flash(f'反馈信息 {form.栏目名.data}!', 'success')`
+  - 跳转其他页面显示flash信息：                 #`return redirect(url_for('home'))`
+
+### 4. Database with Flask-SQLAlchemy
+
+使用Flask-SQLAlchemy创建数据库，这里使用sqlite
+
+### 5. Package Structure
+
+整理文件，不过我一开始就整理好了。
